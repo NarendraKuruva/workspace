@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "taskflow": "apps/taskflow",
+    "taskflow-e2e": "apps/taskflow-e2e"
+  }
+}
