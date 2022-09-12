@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "my-personal-module-1": "libs/my-personal-module-1",
     "taskflow": "apps/taskflow",
     "taskflow-e2e": "apps/taskflow-e2e"
   }
