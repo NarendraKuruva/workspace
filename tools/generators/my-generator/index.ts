@@ -9,9 +9,12 @@ import {
 import { libraryGenerator } from '@nrwl/workspace/generators';
 
 export default async function (tree: Tree, schema: any) {
-  await libraryGenerator(tree, { name: schema.name });
+  await libraryGenerator(tree, {
+    name: schema.name,
+    directory: schema.directory,
+  });
   const libraryRoot = readProjectConfiguration(tree, schema.name).root;
-  generateFiles(
+  await generateFiles(
     tree, // the virtual file system
     joinPathFragments(__dirname, './files'), // path to the file templates
     libraryRoot, // destination path of the files
